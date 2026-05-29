@@ -121,7 +121,7 @@ Introduced 1.0
 After you submit an asynchronous search request, you can request partial responses with the ID that you see in the asynchronous search response.
 
 ```json
-GET _plugins/_asynchronous_search/<ID>?pretty
+GET _plugins/_asynchronous_search/{ID}?pretty
 ```
 
 #### Example response
@@ -198,7 +198,7 @@ Introduced 1.0
 To delete an asynchronous search:
 
 ```
-DELETE _plugins/_asynchronous_search/<ID>?pretty
+DELETE _plugins/_asynchronous_search/{ID}?pretty
 ```
 
 - If the search is still running, OpenSearch cancels it.
@@ -262,5 +262,5 @@ Options | Description
 `search_failed` | The number of asynchronous search requests that completed with a failed response.
 `persisted` | The number of asynchronous search requests whose final result successfully persisted in the cluster.
 `persist_failed` | The number of asynchronous search requests whose final result failed to persist in the cluster.
-`running_current` | The number of asynchronous search requests that are running on a given coordinator node.
+`running_current` | The number of asynchronous search requests that are running on a given coordinating node.
 `cancelled` | The number of asynchronous search requests that were canceled while the search was running.
